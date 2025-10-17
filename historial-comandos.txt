@@ -1,0 +1,44 @@
+# Historial de Comandos - Práctica Gestión de Ramas
+# Fecha: 17/10/2025
+# Estudiante: Jose Alejandro Diaz
+
+# Fase 2: Configuración Inicial
+git add README.md
+git commit -m "Commit inicial: estructura base del proyecto"
+git push origin main
+
+# Fase 3: Trabajo con Múltiples Ramas
+git checkout -b desarrollo
+git add .
+git commit -m "feat: añadir función de saludo básica"
+git checkout -b feature/validacion
+git add .
+git commit -m "feat: añadir validación de email"
+
+# Fase 4: Simulación de Pull Request
+git checkout desarrollo
+git checkout -b respaldo-17-10-2025-JAD
+git push -u origin respaldo-17-10-2025-JAD
+
+# Fase 5: Fusión y Resolución de Conflictos
+git checkout desarrollo
+git merge feature/validacion
+git checkout main
+git add funciones.js
+git commit -m "feat: añadir función de saludo en main"
+git checkout desarrollo
+git add funciones.js
+git commit -m "feat: modificar función de saludo en desarrollo"
+git merge main
+# Conflicto resuelto manualmente
+git add .
+git commit -m "fix: resolver conflicto en fusión"
+
+# Fase 6: Limpieza y Documentación
+git branch -d feature/validacion
+git push origin desarrollo
+
+# Comandos adicionales utilizados:
+# git status (para verificar estado)
+# git log (para ver historial de commits)
+# git branch (para listar ramas)
