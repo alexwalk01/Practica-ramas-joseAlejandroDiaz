@@ -37,8 +37,3 @@ git commit -m "fix: resolver conflicto en fusión"
 # Fase 6: Limpieza y Documentación
 git branch -d feature/validacion
 git push origin desarrollo
-
-# Comandos adicionales utilizados:
-# git status (para verificar estado)
-# git log (para ver historial de commits)
-# git branch (para listar ramas)
